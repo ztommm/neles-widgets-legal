@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Neles Widgets — Desktop widgets for Windows</title>
+<title>CutieDesk — Cute desktop widgets for Windows</title>
+<meta name="description" content="CutieDesk puts small, pretty, draggable widgets on your Windows desktop: clock, weather, Google Calendar, Spotify, notes and countdowns." />
 <style>
   body {
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
@@ -14,71 +15,72 @@
     line-height: 1.65;
     background: #fff8fa;
   }
-  h1 { color: #e8558a; font-size: 32px; margin-bottom: 6px; }
-  .tagline { color: #8a6b76; font-size: 16px; margin-bottom: 32px; }
+  h1 { color: #e8558a; font-size: 34px; margin-bottom: 6px; }
+  .tagline { color: #8a6b76; font-size: 17px; margin-bottom: 28px; }
   h2 { color: #d6486b; font-size: 19px; margin-top: 36px; }
   a { color: #e8558a; }
   ul { padding-left: 22px; }
   li { margin-bottom: 8px; }
-  .footer-links {
-    margin-top: 48px;
-    padding-top: 20px;
-    border-top: 1px solid #ffd6e4;
-    font-size: 14px;
-    color: #8a6b76;
-  }
   .badge {
-    display: inline-block;
-    background: #ffe9f1;
-    color: #d6486b;
-    padding: 3px 10px;
-    border-radius: 999px;
-    font-size: 12px;
-    font-weight: 600;
-    margin-bottom: 16px;
+    display: inline-block; background: #ffe9f1; color: #d6486b; padding: 3px 10px;
+    border-radius: 999px; font-size: 12px; font-weight: 600; margin-bottom: 16px;
   }
+  .download {
+    display: inline-block; background: #ff7fa8; color: #fff; text-decoration: none; font-weight: 600;
+    padding: 11px 22px; border-radius: 12px; margin: 4px 0 8px;
+  }
+  .download:hover { background: #e8558a; }
+  .small { font-size: 13px; color: #8a6b76; }
+  .footer-links {
+    margin-top: 48px; padding-top: 20px; border-top: 1px solid #ffd6e4; font-size: 14px; color: #8a6b76;
+  }
+  .footer-links a { margin-right: 16px; }
 </style>
 </head>
 <body>
+  <span class="badge">Windows desktop app</span>
+  <h1>CutieDesk</h1>
+  <p class="tagline">Small, pretty, draggable widgets that live on your desktop.</p>
 
-<span class="badge">Windows desktop app</span>
-<h1>Neles Widgets</h1>
-<p class="tagline">Small, pretty, draggable widgets that live on your desktop.</p>
+  <p>
+    CutieDesk is a lightweight Windows app that puts a set of independent, freely movable
+    widgets on your desktop. They sit just above your wallpaper, behind the apps you're
+    using, and come forward when you go to the desktop (for example with Win+D).
+  </p>
 
-<p>
-  Neles Widgets is a lightweight Windows desktop application that displays a set of
-  independent, freely movable widgets directly on your desktop — visible alongside your
-  files and icons, without getting in the way of the apps you're actually using.
-</p>
+  <a class="download" href="https://github.com/ztommm/widgets-app/releases/latest">Download for Windows</a>
+  <p class="small">Free · Windows 10 and 11 · updates install automatically in the background</p>
 
-<h2>What it does</h2>
-<ul>
-  <li><strong>Clock</strong> — an elegant, always-visible clock and date display.</li>
-  <li><strong>Weather</strong> — a multi-day local weather forecast, with a detailed view for each day.</li>
-  <li><strong>Calendar</strong> — connects to your Google Calendar (optional) to show a full month view across all of your calendars, with the ability to add new events directly from the widget.</li>
-  <li><strong>Now Playing</strong> — connects to your Spotify account (optional) to show what's currently playing, with album art and playback progress.</li>
-  <li><strong>Notepad</strong> — a simple sticky-note widget for jotting things down, saved automatically on your own device.</li>
-  <li><strong>Countdown</strong> — track the days remaining until birthdays, trips, deadlines, or any date that matters to you.</li>
-</ul>
+  <h2>Widgets</h2>
+  <ul>
+    <li><strong>Clock</strong> — time and date, in your own time zone or any other.</li>
+    <li><strong>Weather</strong> — a multi-day forecast for your location or any city you choose.</li>
+    <li><strong>Calendar</strong> — connects to your Google Calendar (optional) to show a month view across
+      your calendars, and lets you add, edit, delete and repeat events right from the widget.</li>
+    <li><strong>Now Playing</strong> — connects to your Spotify account (optional) to show what's playing,
+      with play/pause, skip, shuffle, repeat and a volume slider.</li>
+    <li><strong>Notepad</strong> — notes with bullets, checklists, bold, italic, colours and highlights,
+      saved automatically on your own computer.</li>
+    <li><strong>Countdown</strong> — count the days to birthdays, trips, deadlines or any date that matters to you.</li>
+  </ul>
 
-<h2>How it works</h2>
-<p>
-  Every widget can be dragged anywhere on your screen, resized, shown or hidden
-  individually, and recolored to match your taste — each widget has its own background
-  color, accent color, text color, and opacity. Widgets sit at normal desktop level, so
-  other applications you open will naturally appear in front of them, just like desktop
-  icons.
-</p>
-<p>
-  Connecting a Google or Spotify account is entirely optional and only required for the
-  Calendar and Now Playing widgets respectively. All of your data — sign-in tokens, notes,
-  countdowns, and settings — is stored locally on your own computer. See our
-  <a href="./privacy.html">Privacy Policy</a> for full details on what data is accessed and how it's handled.
-</p>
+  <h2>Make it yours</h2>
+  <p>
+    Drag every widget anywhere, resize it, show or hide it, and pick its background, accent and text
+    colours and opacity. With more than one monitor, choose which screen the widgets live on.
+  </p>
 
-<div class="footer-links">
-  <a href="./privacy.html">Privacy Policy</a>
-</div>
+  <h2>Your data stays on your computer</h2>
+  <p>
+    Connecting Google or Spotify is optional and only needed for the Calendar and Now Playing widgets.
+    Your sign-ins, notes, countdowns and settings are stored locally on your own computer; CutieDesk has
+    no servers of its own and no analytics. The <a href="./privacy.html">Privacy Policy</a> explains exactly
+    what the app accesses and which services it talks to.
+  </p>
 
+  <div class="footer-links">
+    <a href="./privacy.html">Privacy Policy</a>
+    <a href="mailto:tomurs123@gmail.com">Contact</a>
+  </div>
 </body>
 </html>
