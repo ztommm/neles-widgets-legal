@@ -39,7 +39,7 @@ h1, h2, h3 { color: var(--ink); margin: 0; font-weight: 700; letter-spacing: -0.
 .nav .wrap { display: flex; align-items: center; gap: 40px; height: 72px; }
 .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 800; font-size: 21px; letter-spacing: -0.03em; }
 .brand:hover { color: var(--ink); }
-.brand svg { width: 28px; height: 28px; }
+.brand img { width: 30px; height: 30px; display: block; }
 .nav-links { display: flex; gap: 28px; }
 .nav-links a { color: var(--muted); text-decoration: none; font-weight: 500; font-size: 16px; }
 .nav-links a:hover { color: var(--ink); }

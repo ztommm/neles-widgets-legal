@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffa6c4"/><stop offset="1" stop-color="#ec5389"/></linearGradient>
+<linearGradient id="soft" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff5f9"/><stop offset="1" stop-color="#ffd9e6"/></linearGradient>
+<linearGradient id="hg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff86ad"/><stop offset="1" stop-color="#e8467f"/></linearGradient>
+<radialGradient id="shine" cx=".3" cy=".2" r=".7"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+</defs>
+<rect x="4" y="4" width="92" height="92" rx="24" fill="url(#g)"/><rect x="4" y="4" width="92" height="92" rx="24" fill="url(#shine)"/>
+<path transform="translate(50 52) scale(0.6) translate(-50 -49.5)" fill="#fff" d="M50 82C50 82 16 61 16 37C16 25 25 17 35.5 17C42.5 17 47.5 21 50 26C52.5 21 57.5 17 64.5 17C75 17 84 25 84 37C84 61 50 82 50 82Z"/></svg>
