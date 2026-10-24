@@ -4,32 +4,29 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Privacy Policy — CutieDesk</title>
-<style>
-  body {
-    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 48px 24px 80px;
-    color: #33222b;
-    line-height: 1.6;
-    background: #fff8fa;
-  }
-  h1 { color: #e8558a; font-size: 28px; margin-bottom: 4px; }
-  .updated { color: #8a6b76; font-size: 14px; margin-bottom: 32px; }
-  h2 { color: #d6486b; font-size: 19px; margin-top: 36px; }
-  a { color: #e8558a; }
-  ul { padding-left: 22px; }
-  li { margin-bottom: 6px; }
-  code { background: #ffe9f1; padding: 2px 6px; border-radius: 4px; font-size: 13px; }
-  table { border-collapse: collapse; width: 100%; font-size: 14px; margin: 12px 0; }
-  th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid #ffd6e4; }
-  th { color: #d6486b; }
-  .back { font-size: 14px; }
-</style>
+<meta name="description" content="What CutieDesk accesses, why, where it is stored, and which services it talks to." />
+<meta name="theme-color" content="#fffaf7" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='10' fill='%23f0628f'/%3E%3Cpath d='M16 24s-7-4.4-7-9.3A3.8 3.8 0 0 1 16 12.6a3.8 3.8 0 0 1 7 2.1C23 19.6 16 24 16 24z' fill='%23fff'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <p class="back"><a href="./">← CutieDesk</a></p>
-  <h1>Privacy Policy</h1>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="CutieDesk home">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8a4.2 4.2 0 0 1 7.5 2.5c0 5.4-7.5 10-7.5 10z"/></svg></span>
+      CutieDesk
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="./#widgets">Widgets</a>
+      <a href="./#style">Make it yours</a>
+      <a href="./#privacy">Privacy</a>
+      <a href="./#faq">FAQ</a>
+    </nav>
+    <div class="nav-cta"><a class="btn btn-soft btn-sm" href="mailto:tomurs123@gmail.com">Say hi</a></div>
+  </div>
+</header>
+<main class="doc">
+<h1>Privacy Policy</h1>
   <p class="updated">CutieDesk · Last updated: October 23, 2026</p>
 
   <p>
@@ -73,7 +70,7 @@
   <p>This data is fetched directly from Spotify, shown in the widget, and not stored or shared.</p>
 
   <h2>4. Services the App communicates with</h2>
-  <table>
+  <div class="table-scroll"><table>
     <tr><th>Service</th><th>When</th><th>What it receives</th></tr>
     <tr><td>Google (accounts.google.com, googleapis.com)</td><td>Only if you connect Google Calendar</td><td>Your sign-in and calendar requests</td></tr>
     <tr><td>Spotify (accounts.spotify.com, api.spotify.com)</td><td>Only if you connect Spotify</td><td>Your sign-in and playback requests</td></tr>
@@ -81,7 +78,7 @@
     <tr><td>ipwho.is, with ipapi.co as a backup</td><td>Weather widget set to automatic location (the default)</td><td>Your IP address, to estimate your city. Choose a city manually in Settings and no IP lookup is made.</td></tr>
     <tr><td>Google Fonts (fonts.googleapis.com)</td><td>When the widgets load</td><td>Your IP address, as for any web font request</td></tr>
     <tr><td>GitHub (github.com)</td><td>Checking for app updates</td><td>Your IP address and the App version, as for any download</td></tr>
-  </table>
+  </table></div>
   <p>
     Each of these services handles requests under its own privacy policy. Like any internet request, they can see your
     IP address. The App does not send them your name, email, notes, calendar or any other personal content.
@@ -124,5 +121,17 @@
     of personal data. Questions or requests about your data:
     <a href="mailto:tomurs123@gmail.com">tomurs123@gmail.com</a>.
   </p>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="inner">
+      <span>© 2026 CutieDesk · made with 💗 by Toms Brass</span>
+      <nav aria-label="Footer">
+        <a href="./privacy.html">Privacy Policy</a>
+        <a href="mailto:tomurs123@gmail.com">Contact</a>
+      </nav>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

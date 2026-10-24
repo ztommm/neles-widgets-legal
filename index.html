@@ -4,83 +4,191 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>CutieDesk — Cute desktop widgets for Windows</title>
-<meta name="description" content="CutieDesk puts small, pretty, draggable widgets on your Windows desktop: clock, weather, Google Calendar, Spotify, notes and countdowns." />
-<style>
-  body {
-    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 48px 24px 80px;
-    color: #33222b;
-    line-height: 1.65;
-    background: #fff8fa;
-  }
-  h1 { color: #e8558a; font-size: 34px; margin-bottom: 6px; }
-  .tagline { color: #8a6b76; font-size: 17px; margin-bottom: 28px; }
-  h2 { color: #d6486b; font-size: 19px; margin-top: 36px; }
-  a { color: #e8558a; }
-  ul { padding-left: 22px; }
-  li { margin-bottom: 8px; }
-  .badge {
-    display: inline-block; background: #ffe9f1; color: #d6486b; padding: 3px 10px;
-    border-radius: 999px; font-size: 12px; font-weight: 600; margin-bottom: 16px;
-  }
-  .download {
-    display: inline-block; background: #ff7fa8; color: #fff; text-decoration: none; font-weight: 600;
-    padding: 11px 22px; border-radius: 12px; margin: 4px 0 8px;
-  }
-  .download:hover { background: #e8558a; }
-  .small { font-size: 13px; color: #8a6b76; }
-  .footer-links {
-    margin-top: 48px; padding-top: 20px; border-top: 1px solid #ffd6e4; font-size: 14px; color: #8a6b76;
-  }
-  .footer-links a { margin-right: 16px; }
-</style>
+<meta name="description" content="CutieDesk puts small, pretty widgets on your Windows desktop: clock, weather, Google Calendar, Spotify, notes and countdowns. Coming soon." />
+<meta name="theme-color" content="#fffaf7" />
+<meta property="og:title" content="CutieDesk — Cute desktop widgets for Windows" />
+<meta property="og:description" content="Little widgets for a cosier desktop: clock, weather, calendar, Spotify, notes and countdowns." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='10' fill='%23f0628f'/%3E%3Cpath d='M16 24s-7-4.4-7-9.3A3.8 3.8 0 0 1 16 12.6a3.8 3.8 0 0 1 7 2.1C23 19.6 16 24 16 24z' fill='%23fff'/%3E%3C/svg%3E" />
+<link rel="preload" href="fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <span class="badge">Windows desktop app</span>
-  <h1>CutieDesk</h1>
-  <p class="tagline">Small, pretty, draggable widgets that live on your desktop.</p>
 
-  <p>
-    CutieDesk is a lightweight Windows app that puts a set of independent, freely movable
-    widgets on your desktop. They sit just above your wallpaper, behind the apps you're
-    using, and come forward when you go to the desktop (for example with Win+D).
-  </p>
-
-  <a class="download" href="https://github.com/ztommm/widgets-app/releases/latest">Download for Windows</a>
-  <p class="small">Free · Windows 10 and 11 · updates install automatically in the background</p>
-
-  <h2>Widgets</h2>
-  <ul>
-    <li><strong>Clock</strong> — time and date, in your own time zone or any other.</li>
-    <li><strong>Weather</strong> — a multi-day forecast for your location or any city you choose.</li>
-    <li><strong>Calendar</strong> — connects to your Google Calendar (optional) to show a month view across
-      your calendars, and lets you add, edit, delete and repeat events right from the widget.</li>
-    <li><strong>Now Playing</strong> — connects to your Spotify account (optional) to show what's playing,
-      with play/pause, skip, shuffle, repeat and a volume slider.</li>
-    <li><strong>Notepad</strong> — notes with bullets, checklists, bold, italic, colours and highlights,
-      saved automatically on your own computer.</li>
-    <li><strong>Countdown</strong> — count the days to birthdays, trips, deadlines or any date that matters to you.</li>
-  </ul>
-
-  <h2>Make it yours</h2>
-  <p>
-    Drag every widget anywhere, resize it, show or hide it, and pick its background, accent and text
-    colours and opacity. With more than one monitor, choose which screen the widgets live on.
-  </p>
-
-  <h2>Your data stays on your computer</h2>
-  <p>
-    Connecting Google or Spotify is optional and only needed for the Calendar and Now Playing widgets.
-    Your sign-ins, notes, countdowns and settings are stored locally on your own computer; CutieDesk has
-    no servers of its own and no analytics. The <a href="./privacy.html">Privacy Policy</a> explains exactly
-    what the app accesses and which services it talks to.
-  </p>
-
-  <div class="footer-links">
-    <a href="./privacy.html">Privacy Policy</a>
-    <a href="mailto:tomurs123@gmail.com">Contact</a>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="CutieDesk home">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8a4.2 4.2 0 0 1 7.5 2.5c0 5.4-7.5 10-7.5 10z"/></svg></span>
+      CutieDesk
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="./#widgets">Widgets</a>
+      <a href="./#style">Make it yours</a>
+      <a href="./#privacy">Privacy</a>
+      <a href="./#faq">FAQ</a>
+    </nav>
+    <div class="nav-cta"><a class="btn btn-soft btn-sm" href="mailto:tomurs123@gmail.com">Say hi</a></div>
   </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="pill"><span class="dot">💗</span>Desktop widgets for Windows</span>
+        <h1>Make your desktop a little <em class="pink">cuter</em>.</h1>
+        <p class="lede">
+          CutieDesk adds small, pretty widgets to your Windows desktop — a clock, the weather, your
+          Google Calendar, what's playing on Spotify, notes and countdowns. Place them anywhere, colour
+          them your way, and they'll quietly keep you company.
+        </p>
+        <div class="hero-cta">
+          <span class="soon">Coming soon</span>
+          <a class="btn btn-soft" href="#widgets">See the widgets</a>
+        </div>
+        <p class="note-small"><span>Windows 10 &amp; 11</span><span>No account needed</span><span>Your data stays on your PC</span></p>
+      </div>
+
+      <div class="screen" role="img" aria-label="A Windows desktop with CutieDesk widgets: clock, music, notes, weather and a countdown">
+        <span class="sticker">so cute ✨</span>
+        <div class="wallpaper">
+          <div class="mw mw-clock"><div class="t">18:42</div><div class="d">FRIDAY · 24 OCT</div></div>
+          <div class="mw mw-music">
+            <div class="art"></div>
+            <div style="min-width:0;flex:1">
+              <div class="lab">Now playing</div>
+              <div class="s">Pink Skies</div>
+              <div class="a">Luna Rae</div>
+              <div class="bar"><i></i></div>
+            </div>
+          </div>
+          <div class="mw mw-notes">
+            <div class="lab">Notes</div>
+            <ul>
+              <li><span class="c on"></span><span class="done">buy flowers</span></li>
+              <li><span class="c"></span><span>call <b>mum</b> 💕</span></li>
+              <li><span class="c"></span><span>pack for Rome</span></li>
+            </ul>
+          </div>
+          <div class="mw mw-weather"><div class="ic">⛅</div><div class="t">14°</div><div class="c">Partly cloudy</div></div>
+          <div class="mw mw-count"><div class="n">58</div><div class="w">days to Rome ✈️</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="widgets" class="center">
+    <div class="wrap">
+      <span class="kicker">The widgets</span>
+      <h2>Six little helpers, <em class="pink">one cosy desk</em></h2>
+      <p class="sub">Show the ones you love and hide the rest. Each one can be moved, resized and recoloured on its own.</p>
+      <div class="cards">
+        <article class="card"><div class="ic">🕰️</div><h3>Clock</h3><p>The time and date, in your own time zone or anywhere in the world.</p></article>
+        <article class="card"><div class="ic">⛅</div><h3>Weather</h3><p>A few days of forecast for where you are, or any city you choose.</p></article>
+        <article class="card"><div class="ic">📅</div><h3>Calendar<span class="opt">optional</span></h3><p>Your Google Calendar at a glance. Add, change and repeat events without opening a browser.</p></article>
+        <article class="card"><div class="ic">🎧</div><h3>Now Playing<span class="opt">optional</span></h3><p>See what's on Spotify, skip songs, shuffle, repeat and turn the volume up or down.</p></article>
+        <article class="card"><div class="ic">📝</div><h3>Notes</h3><p>Lists, checklists, bold, colours and highlights — saved as you type.</p></article>
+        <article class="card"><div class="ic">⏳</div><h3>Countdown</h3><p>Birthdays, holidays, big days — always know how many sleeps are left.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="style" class="band">
+    <div class="wrap split">
+      <div>
+        <span class="kicker">Make it yours</span>
+        <h2>Your colours, <em class="pink">your corner</em></h2>
+        <p>Every widget has its own background, accent and text colour, plus how see-through it is. Make them match your wallpaper, your mood, or nothing at all.</p>
+        <ul class="checks">
+          <li>Drag widgets anywhere and resize them</li>
+          <li>Pick which screen they live on if you have two monitors</li>
+          <li>They sit behind your apps and games, and pop up when you show the desktop (<kbd>Win</kbd> + <kbd>D</kbd>)</li>
+        </ul>
+      </div>
+      <div class="swatches" aria-hidden="true">
+        <div class="lab">Pick a colour</div>
+        <div class="swatch-row">
+          <span style="background:#ffd1e1"></span><span style="background:#f0628f"></span><span style="background:#ffe9b8"></span>
+          <span style="background:#d7f0e2"></span><span style="background:#dcd3ff"></span><span style="background:#cfe8ff"></span><span style="background:#3d2230"></span>
+        </div>
+        <div class="mini-widgets">
+          <div class="mini" style="background:#ffe3ec;color:#d9456f"><small>Clock</small>9:41</div>
+          <div class="mini" style="background:#e8e1ff;color:#6a4fc4"><small>Weather</small>21°</div>
+          <div class="mini" style="background:#dff3e8;color:#2f7d58"><small>Countdown</small>12</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <div class="wrap split">
+      <div>
+        <span class="kicker">Privacy</span>
+        <h2>Your notes stay <em class="pink">yours</em></h2>
+        <p>CutieDesk doesn't have servers of its own, and there's no tracking or ads. Your notes, countdowns and settings live only on your computer. If you connect Google or Spotify, CutieDesk talks to them directly — nothing passes through us.</p>
+        <p><a href="./privacy.html">Read the privacy policy →</a></p>
+      </div>
+      <div class="svc" aria-label="What CutieDesk connects to">
+        <div><span>Google Calendar</span><span>only if you connect it</span></div>
+        <div><span>Spotify</span><span>only if you connect it</span></div>
+        <div><span>Weather</span><span>Open-Meteo</span></div>
+        <div><span>Your location</span><span>estimated, or pick a city</span></div>
+        <div><span>Updates</span><span>checked in the background</span></div>
+        <div><span>CutieDesk servers</span><span class="yay">none ♡</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="band center">
+    <div class="wrap">
+      <span class="kicker">FAQ</span>
+      <h2>Little questions</h2>
+      <p class="sub">Anything else? <a href="mailto:tomurs123@gmail.com">Send us a message</a>.</p>
+      <div class="faq">
+        <details>
+          <summary>When can I get CutieDesk?</summary>
+          <p>Very soon — we're adding the finishing touches. Want to hear when it's ready? <a href="mailto:tomurs123@gmail.com?subject=Tell%20me%20when%20CutieDesk%20is%20out">Drop us a message</a>.</p>
+        </details>
+        <details>
+          <summary>Will the widgets get in the way of my games or apps?</summary>
+          <p>No. They sit just above your wallpaper, behind whatever you're using — fullscreen games included. Show the desktop and they're right there; open something else and they step back.</p>
+        </details>
+        <details>
+          <summary>Do I need a Google or Spotify account?</summary>
+          <p>No, only for the Calendar and Now Playing widgets. Spotify's playback buttons (play, skip, shuffle, repeat, volume) need Spotify Premium — that's Spotify's rule, not ours.</p>
+        </details>
+        <details>
+          <summary>Does it work with two monitors?</summary>
+          <p>Yes. Choose which screen your widgets live on from the tray icon or Settings.</p>
+        </details>
+        <details>
+          <summary>How do updates work?</summary>
+          <p>CutieDesk updates itself quietly in the background — no installers to click through and nothing to re-download.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="wrap">
+      <div class="box">
+        <h2>A cosier desktop is <em class="pink">almost here</em></h2>
+        <p>CutieDesk is coming soon for Windows 10 and 11.</p>
+        <a class="btn btn-pink" href="mailto:tomurs123@gmail.com?subject=Tell%20me%20when%20CutieDesk%20is%20out">Tell me when it's ready</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="inner">
+      <span>© 2026 CutieDesk · made with 💗 by Toms Brass</span>
+      <nav aria-label="Footer">
+        <a href="./privacy.html">Privacy Policy</a>
+        <a href="mailto:tomurs123@gmail.com">Contact</a>
+      </nav>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
