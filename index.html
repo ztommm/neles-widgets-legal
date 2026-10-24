@@ -22,11 +22,11 @@
     </a>
     <nav class="nav-links" aria-label="Main">
       <a href="./#widgets">Widgets</a>
-      <a href="./#customise">Customise</a>
+      <a href="./#customise">Try it</a>
       <a href="./#data">Your data</a>
       <a href="./#faq">FAQ</a>
     </nav>
-    <div class="nav-right"><span>Questions? </span><a href="mailto:hello@cutiedesk.app">Contact</a></div>
+    <div class="nav-right"><span>Ideas or bugs? </span><a href="./contact.html">Contact</a></div>
   </div>
 </header>
 
@@ -41,7 +41,7 @@
           desktop. Move them where you like and give each one its own colours.
         </p>
         <div class="actions">
-          <a class="btn btn-dark" href="mailto:hello@cutiedesk.app?subject=Tell%20me%20when%20CutieDesk%20is%20out">Tell me when it's out</a>
+          <a class="btn btn-dark" href="./contact.html?topic=Launch">Tell me when it's out</a>
           <a class="btn btn-line" href="#widgets">See the widgets</a>
         </div>
         <p class="fine">No account needed. Your notes and settings stay on your computer.</p>
@@ -49,7 +49,7 @@
 
       <div class="screen" role="img" aria-label="A Windows desktop with CutieDesk widgets: clock, music player, notes, weather and a countdown">
         <div class="wallpaper">
-          <div class="mw mw-clock"><div class="t">18:42</div><div class="d">FRIDAY 24 OCT</div></div>
+          <div class="mw mw-clock"><div class="t" data-live-time>18:42</div><div class="d" data-live-date>FRIDAY 24 OCT</div></div>
           <div class="mw mw-music">
             <div class="art"></div>
             <div style="min-width:0;flex:1">
@@ -120,11 +120,11 @@
           <div class="body"><h3>Now Playing <span class="tag">Spotify</span></h3><p>See what's playing. Skip, pause, shuffle, repeat and change the volume.</p></div>
         </article>
         <article class="card">
-          <div class="viz"><div class="v-notes">groceries: <b>milk</b>, eggs<br>☑ <mark>book dentist</mark><br>☐ reply to Anna</div></div>
-          <div class="body"><h3>Notes</h3><p>Lists, checklists, bold, colours and highlights. Saves while you type.</p></div>
+          <div class="viz"><div class="v-notes">groceries: <b>milk</b>, eggs<br><span class="done"><button type="button" data-check aria-pressed="true" aria-label="book dentist">☑</button> <mark>book dentist</mark></span><br><span><button type="button" data-check aria-pressed="false" aria-label="reply to Anna">☐</button> reply to Anna</span></div></div>
+          <div class="body"><h3>Notes</h3><p>Lists, checklists, bold, colours and highlights. Saves while you type. Tick the boxes above.</p></div>
         </article>
         <article class="card">
-          <div class="viz"><div class="v-count"><b>12</b><span>days until Mia's birthday</span></div></div>
+          <div class="viz"><div class="v-count"><b id="cdDays">12</b><span id="cdLabel">days until Mia's birthday</span><label class="cd-pick">Try a date <input type="date" id="cdDate" /></label></div></div>
           <div class="body"><h3>Countdown</h3><p>Count down to birthdays, trips and deadlines, nearest first.</p></div>
         </article>
       </div>
@@ -134,26 +134,59 @@
   <section id="customise">
     <div class="wrap split">
       <div>
-        <h2>Change the colours. Move things around.</h2>
-        <p style="margin-top:18px">Every widget has its own background, accent and text colour, and you choose how see-through it is. Match your wallpaper, or don't.</p>
+        <h2>Try it: change the colours, move it around.</h2>
+        <p style="margin-top:18px">Every widget has its own background, accent and text colour, and you choose how see-through it is. Have a go with the demo clock: it works the same way in the app.</p>
         <ul class="list">
           <li><span>01</span><span>Drag a widget anywhere and resize it by its edges.</span></li>
           <li><span>02</span><span>With two monitors, pick the screen the widgets live on.</span></li>
           <li><span>03</span><span>They stay behind your apps and games, and come forward when you press <kbd>Win</kbd> + <kbd>D</kbd>.</span></li>
         </ul>
       </div>
-      <div class="palette" aria-hidden="true">
-        <div class="lab">Background</div>
-        <div class="swatches">
-          <span style="background:#f6d3df" class="sel"></span><span style="background:#c2456c"></span><span style="background:#ffe7b3"></span>
-          <span style="background:#d5ecdd"></span><span style="background:#ddd4f5"></span><span style="background:#cfe2f3"></span><span style="background:#2a1a21"></span>
+      <div class="demo">
+        <div class="demo-stage" id="demoStage">
+          <div class="demo-widget" id="demoWidget" tabindex="0" role="group" aria-label="Demo clock widget. Drag it, or use the arrow keys to move it.">
+            <div class="dw-head"><span class="dw-dots" aria-hidden="true">⠿⠿</span><span>Clock</span></div>
+            <div class="dw-time" data-live-time>18:42</div>
+            <div class="dw-date" data-live-date>FRIDAY 24 OCT</div>
+          </div>
+          <span class="demo-hint">drag me</span>
         </div>
-        <div class="samples">
-          <div style="background:#f6d3df;color:#a8365a"><small>Clock</small>9:41</div>
-          <div style="background:#ddd4f5;color:#5b45a3"><small>Weather</small>21°</div>
-          <div style="background:#2a1a21;color:#f6c4d5"><small>Countdown</small>12</div>
+        <div class="demo-controls">
+          <div class="ctl-row">
+            <span class="ctl-label" id="bgLabel">Background</span>
+            <div class="chips" role="group" aria-labelledby="bgLabel">
+              <button type="button" data-bg="#ffffff" aria-pressed="true" aria-label="White" style="--c:#ffffff"></button>
+              <button type="button" data-bg="#ffe3ec" aria-pressed="false" aria-label="Pink" style="--c:#ffe3ec"></button>
+              <button type="button" data-bg="#fff3c4" aria-pressed="false" aria-label="Butter" style="--c:#fff3c4"></button>
+              <button type="button" data-bg="#dff3e8" aria-pressed="false" aria-label="Mint" style="--c:#dff3e8"></button>
+              <button type="button" data-bg="#e8e1ff" aria-pressed="false" aria-label="Lilac" style="--c:#e8e1ff"></button>
+              <button type="button" data-bg="#2a1a21" aria-pressed="false" aria-label="Plum" style="--c:#2a1a21"></button>
+            </div>
+          </div>
+          <div class="ctl-row">
+            <span class="ctl-label" id="acLabel">Accent</span>
+            <div class="chips" role="group" aria-labelledby="acLabel">
+              <button type="button" data-accent="#c2456c" aria-pressed="true" aria-label="Rose" style="--c:#c2456c"></button>
+              <button type="button" data-accent="#e0782f" aria-pressed="false" aria-label="Orange" style="--c:#e0782f"></button>
+              <button type="button" data-accent="#2f9e6b" aria-pressed="false" aria-label="Green" style="--c:#2f9e6b"></button>
+              <button type="button" data-accent="#6a4fc4" aria-pressed="false" aria-label="Purple" style="--c:#6a4fc4"></button>
+              <button type="button" data-accent="#2b7bbf" aria-pressed="false" aria-label="Blue" style="--c:#2b7bbf"></button>
+            </div>
+          </div>
+          <div class="ctl-row">
+            <span class="ctl-label" id="txLabel">Text</span>
+            <div class="seg" role="group" aria-labelledby="txLabel">
+              <button type="button" data-text="dark" aria-pressed="true">Dark</button>
+              <button type="button" data-text="light" aria-pressed="false">Light</button>
+            </div>
+          </div>
+          <div class="ctl-row">
+            <label class="ctl-label" for="opacity">Opacity</label>
+            <input type="range" id="opacity" min="30" max="100" value="85" />
+            <span class="ctl-value" id="opacityValue">85%</span>
+          </div>
+          <button type="button" class="reset" id="demoReset">Reset</button>
         </div>
-        <div class="opacity"><span>Opacity</span><div class="track"><i></i><b></b></div><span>72%</span></div>
       </div>
     </div>
   </section>
@@ -206,12 +239,12 @@
     <div class="wrap faq">
       <div class="side">
         <h2>Questions</h2>
-        <p>Something not covered here? <a href="mailto:hello@cutiedesk.app">Send an email</a> and you'll get a reply from the person who makes it.</p>
+        <p>Something not covered here? <a href="./contact.html">Send a message</a> and you'll get a reply from the person who makes it.</p>
       </div>
       <div>
         <details>
           <summary>When is it out?</summary>
-          <p>Soon. It's in testing with a small group right now. <a href="mailto:hello@cutiedesk.app?subject=Tell%20me%20when%20CutieDesk%20is%20out">Email us</a> if you'd like to hear when it's ready.</p>
+          <p>Soon. It's in testing with a small group right now. <a href="./contact.html?topic=Launch">Leave your email</a> if you'd like to hear when it's ready.</p>
         </details>
         <details>
           <summary>Will the widgets cover my games or apps?</summary>
@@ -239,9 +272,10 @@
     <span>© 2026 CutieDesk</span>
     <nav aria-label="Footer">
       <a href="./privacy.html">Privacy policy</a>
-      <a href="mailto:hello@cutiedesk.app">Contact</a>
+      <a href="./contact.html">Contact</a>
     </nav>
   </div>
 </footer>
+<script src="script.js" defer></script>
 </body>
 </html>

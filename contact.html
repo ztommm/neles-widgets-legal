@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — CutieDesk</title>
+<meta name="description" content="Send CutieDesk a suggestion, bug report or question." />
+<meta name="theme-color" content="#eadbe0" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23c2456c'/%3E%3Cpath d='M16 24s-7-4.4-7-9.3A3.8 3.8 0 0 1 16 12.6a3.8 3.8 0 0 1 7 2.1C23 19.6 16 24 16 24z' fill='%23fff'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="CutieDesk home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#c2456c"/><path d="M16 24s-7-4.4-7-9.3A3.8 3.8 0 0 1 16 12.6a3.8 3.8 0 0 1 7 2.1C23 19.6 16 24 16 24z" fill="#fff"/></svg>
+      CutieDesk
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="./#widgets">Widgets</a>
+      <a href="./#customise">Try it</a>
+      <a href="./#data">Your data</a>
+      <a href="./#faq">FAQ</a>
+    </nav>
+    <div class="nav-right"><span>Ideas or bugs? </span><a href="./contact.html">Contact</a></div>
+  </div>
+</header>
+<main class="contact">
+  <div class="wrap">
+    <div class="intro">
+      <h1>Say hi, share an idea, report a bug.</h1>
+      <p>Everything here goes straight to the person who makes CutieDesk. Ideas for new widgets are very welcome.</p>
+      <ul>
+        <li><b>Suggestions</b> — a widget you'd love, a colour, anything.</li>
+        <li><b>Bugs</b> — what you did, what happened, and what you expected.</li>
+        <li><b>Questions</b> — about the app, your data, or anything else.</li>
+      </ul>
+    </div>
+
+    <form class="form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="7cb7eed7-9dcd-4cdc-b378-cf4a2c56857a" />
+      <input type="hidden" name="subject" id="subject" value="CutieDesk: Suggestion" />
+      <input type="hidden" name="from_name" value="cutiedesk.app" />
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+      <div class="field">
+        <label for="topic">What's it about?</label>
+        <select id="topic" name="topic">
+          <option value="Suggestion">A suggestion or idea</option>
+          <option value="Bug report">Something isn't working (bug)</option>
+          <option value="Question">A question</option>
+          <option value="Launch">Let me know when it's out</option>
+          <option value="Other">Something else</option>
+        </select>
+      </div>
+
+      <div class="two">
+        <div class="field">
+          <label for="name">Name <span>(optional)</span></label>
+          <input id="name" name="name" type="text" autocomplete="name" maxlength="80" />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required maxlength="160" />
+        </div>
+      </div>
+
+      <div class="field" id="bugOnly" hidden>
+        <label for="version">App version <span>(right-click the tray icon to see it)</span></label>
+        <input id="version" name="app_version" type="text" placeholder="e.g. 1.1.0" maxlength="20" />
+      </div>
+
+      <div class="field">
+        <label for="message">Message <span id="msgOptional" hidden>(optional)</span></label>
+        <textarea id="message" name="message" maxlength="5000" required></textarea>
+      </div>
+
+      <button class="btn btn-dark" id="sendBtn" type="submit">Send message</button>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      <p class="form-note">We only use your email to reply to you. Messages are delivered by <a href="https://web3forms.com/privacy" target="_blank" rel="noopener">Web3Forms</a>; see our <a href="./privacy.html">privacy policy</a>.</p>
+    </form>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 CutieDesk</span>
+    <nav aria-label="Footer">
+      <a href="./privacy.html">Privacy policy</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+<script src="script.js" defer></script>
+</body>
+</html>
